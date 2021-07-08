@@ -1,50 +1,100 @@
-
-
 nav {
 	border: 1px solid red;
-	
+	/* take up the full page height and give a width */
 	height: 100%;
 	width: 150px;
 	
+	/* flex container */
 	display: flex;
 	flex-direction: column;
-	
-	
+	align-items: center;
+	/* ensure that doesn't move, becomes relative positioned and stops disturbing the page flow
+	add offset to margin to accomodate main	*/
 	position: fixed;
-	
 }
 
 main {
 	/* move the entire page margin to the right due to side navbar */
 	margin-left: 200px;
-	
 }
 
 header {
-	border: 1px solid yellow;
-	
+	font-size: x-large;
 }
 
-ul {
-	border: 1px solid green;
-	
+#nav-list {
+	border: 1px solid white;
+	/* remove the list images */
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 	
+	/* make into a flex container, and align the flex items within */
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 }
 
-li {
-	border: 1px solid blue;
-	
+.nav-link {
+	border: 1px solid red;
+	display: block;
+	/* make a bit pretty, button looking */
+	border-radius: 20px;
+	padding: 5px 40px 5px 40px;
+	margin: 5px;
 }
+
+.main-section {
+	/* put a bit of spacing between the sections */
+	margin-bottom: 50px;
+}
+
+code {
+	/* provide with some background color to accent the code section */
+	background-color: lightblue;
+	/* change from inline to block (changes the flow of the page) */
+	display: block;
+	/* take up the entire page width */
+	width: 100%;
+	padding: 10px;
+	/* max sure that doesn't overflow the page due to padding */
+	box-sizing: border-box;
+}	
 
 
 @media (max-width: 600px) {
+	/* need to change the nav element to be responsive (is the container for the sidebar */
+	nav {
+		border: 1px solid white;
+		background-color: white;
+		/* set a fixed area for the sidenav in mobile mode */
+		height: 110px;
+		width: 100%;
 	
+		display: flex;
+		flex-direction: column;
 	
-	
-	
+		/* pop at the top of the screen */
+		position: relative;
+		top: 0;
+			
+		
+	}
+	#nav-list {
+		border: 1px solid white;
+		width: 100%;
+		overflow: auto;
+	}
+	/* edit the look and feel so that the buttons are larger */
+	.nav-link {
+		display: block;
+		margin: 5px 50px 5px 50px;
+		padding-left: 120px;
+		padding-right: 120px;
+		border: 1px solid black;
+	}
+	/* need to remove the earlier margin shift for the side nav */
+	main {
+		margin-left: 0;
+	}
 }
