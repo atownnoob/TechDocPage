@@ -3,5 +3,4 @@ FreeCodeCamp Responsive Web Design - Technical Documentation Page project. This 
 
 Page can be viewed on CodePen.io here: https://codepen.io/atownnoob/pen/GRmZMGY
 
-#TODO still need to make responsive to screen sizes<br>
 #TODO add in additional formatting to make pretty, need to remove the generic boxes that assist with locating areas
